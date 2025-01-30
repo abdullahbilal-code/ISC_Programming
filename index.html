@@ -1,12 +1,6 @@
 <HTML>
     <HEAD>
-        <script>
-            alert("Hi!")
-            let doIt=()=>{
-                alert("done");
-
-            }
-        </script>
+       <title>Programing</title> 
 
     </HEAD>
     <body>
@@ -42,10 +36,6 @@
     </p>
         <p>The prompt: <button onclick="doIt()">Press me!</button></p>
     
-
-
-        <input type="text" id="userInput" placeholder="Enter text here">
-
         <p>Enter First Number here </p>
         <input type="number"  id="userInput1" placeholder="Ente A Num ">
 
@@ -64,8 +54,8 @@
             function findMulSum(){
 
                 const aValue= parseInt(document.getElementById("useriInput1").value)
-                const bValue= document.getElementById("useriInput2").value;
-                const nValue= document.getElementById("useriInput3").value;
+                const bValue= parseInt(document.getElementById("useriInput2").value)
+                const nValue= parseInt(document.getElementById("useriInput3").value)
               
 
             let sum=0;
@@ -74,11 +64,11 @@
                 sum=+x;
 
             }
-            document.getElementById("userInput1").innerHTML="You entered: " + aValue;
-            document.getElementById("userInput1").innerHTML="You entered: " + bValue;
-            document.getElementById("userInput1").innerHTML="You entered: " + nValue;
+            document.getElementById("userInput1").innerHTML="You entered: " + aValue
+            document.getElementById("userInput2").innerHTML="You entered: " + bValue
+            document.getElementById("userInput3").innerHTML="You entered: " + nValue
 
-            alert (`sum of all the multiples of a or b below n is ${sum}`)
+            alert (`sum of all the multiples of ${aValue} and ${bValue} below ${nValue} is  ${sum}`)
         }
                 
 
