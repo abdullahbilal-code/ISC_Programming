@@ -56,14 +56,14 @@
         <input type="number"  id="userInput3" placeholder="Enter  N Num ">
 
         <p>Calculate the Sum :  </p>
-        <Button onclick=findMulSum() >Calculate</Button>
+        <Button onclick=findMulSum() >Press Me ! </Button>
 
 
         <script>
 
             function findMulSum(){
 
-                const aValue= document.getElementById("useriInput1").value;
+                const aValue= parseInt(document.getElementById("useriInput1").value)
                 const bValue= document.getElementById("useriInput2").value;
                 const nValue= document.getElementById("useriInput3").value;
               
@@ -77,7 +77,7 @@
             document.getElementById("userInput1").innerHTML="You entered: " + aValue;
             document.getElementById("userInput1").innerHTML="You entered: " + bValue;
             document.getElementById("userInput1").innerHTML="You entered: " + nValue;
-            
+
             alert (`sum of all the multiples of a or b below n is ${sum}`)
         }
                 
