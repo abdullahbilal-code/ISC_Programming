@@ -22,13 +22,69 @@
 
         <p>Exercise 2:</p>
         <p>Create a page with a button</p>
-        <p>When the user clicks, </p>
+        <p>When the user clicks, </p>,t=
+        
         <p>
             <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9.
                  The sum of these multiples is 23.</p>
             <p>Find the sum of all the multiples of 3 or 5 below 1000 and alert the user to the correct answer.</p>
-</p>
+
+        </p>
+    <p>The prompt: <button onclick="doIt()">Press me!</button></p>
+
+
+        <p>Exercise 3, Functions:</p>
+        <p>Create a page with a button and three input boxes, labelled a, b and n</p>
+        <p>When the user clicks, </p>
+        <p>
+            <p>Create a function to return the sum of all the multiples of a or b below n</p>
+            <p>Call the function and alert the user to the correct answer when they press the button.</p>
+    </p>
         <p>The prompt: <button onclick="doIt()">Press me!</button></p>
+    
+
+
+        <input type="text" id="userInput" placeholder="Enter text here">
+
+        <p>Enter First Number here </p>
+        <input type="number"  id="userInput1" placeholder="Ente A Num ">
+
+        <p>Enter Second  Number here </p>
+        <input type="number"  id="userInput2" placeholder="Enter B Num ">
+
+        <p>Enter Third Number Here </p>
+        <input type="number"  id="userInput3" placeholder="Enter  N Num ">
+
+        <p>Calculate the Sum :  </p>
+        <Button onclick=findMulSum() >Calculate</Button>
+
+
+        <script>
+
+            function findMulSum(){
+
+                const aValue= document.getElementById("useriInput1").value;
+                const bValue= document.getElementById("useriInput2").value;
+                const nValue= document.getElementById("useriInput3").value;
+              
+
+            let sum=0;
+            for ( let x =0; x < nValue; x++){
+            if (x%aValue==0 || x%bValue==0 ){
+                sum=+x;
+
+            }
+            document.getElementById("userInput1").innerHTML="You entered: " + aValue;
+            document.getElementById("userInput1").innerHTML="You entered: " + bValue;
+            document.getElementById("userInput1").innerHTML="You entered: " + nValue;
+            
+            alert (`sum of all the multiples of a or b below n is ${sum}`)
+        }
+                
+
+         }
+        </script>
+
 
 
     </body>
