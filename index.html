@@ -103,10 +103,10 @@ function findMulSum() {
             // Fetch values and ensure they are valid numbers
             // console.log(document.getElementById("userInput1").value);
             let arr = [
-                Number(document.getElementById("userInput1").value),
-                Number(document.getElementById("userInput2").value),
-                Number(document.getElementById("userInput3").value)
-            ];
+                Number(document.getElementById("userInput1").value) || 0,
+                Number(document.getElementById("userInput2").value) || 0,
+                Number(document.getElementById("userInput3").value) || 0
+             ]
 
             
             if (arr.includes(0)) {
@@ -121,8 +121,9 @@ function findMulSum() {
                     sum += x;
                 }
             }
+            alert (`sum of all the multiples of ${arr[0]} and ${arr[1]} below ${arr[2]} is  ${sum}`)
+
 }
-alert (`sum of all the multiples of ${arr[0]} and ${arr[1]} below ${arr[2]} is  ${sum}`)
 
 </script>
 
