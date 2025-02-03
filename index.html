@@ -46,12 +46,12 @@
         <input type="number"  id="userInput3" placeholder="Enter  N Num ">
 
         <p>Calculate the Sum :  </p>
-        <Button onclick=findMulSum() >Press Me ! </Button>
+        <Button onclick=findMulSumA() >Press Me ! </Button>
 
 
         <script>
 
-            function findMulSum(){
+            function findMulSumA(){
 
                 const aValue= parseInt(document.getElementById("userInput1").value)
                 const bValue= parseInt(document.getElementById("userInput2").value)
@@ -108,7 +108,8 @@
       
         if (arr[0]<=0 || arr[1] <=0 || arr[2] <= 0){
             alert("Please enter valid positive numbers");
-            return;        }
+            return; 
+        }
 
     let sum=0;
 
