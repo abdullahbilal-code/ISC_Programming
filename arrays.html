@@ -5,14 +5,50 @@
 
 </HEAD>
 <body>
-    <p>Exercise 4, Arrays:</p>
-    <p>Create a page with a button and three input boxes, labelled a, b and l, l should be a large input</p>
-    <p>Create a function to return the sum of all the multiples of a or b in l</p>
-    <p>Call the function and alert the user to the correct answer when they press the button.</p>
-    </p>
-    <p>Button and Three input boxes</p>
+</p>
+    <p>Exercise 5, Arrays:</p>
+<p>Create a page with a button and two wide input boxes, labelled a and l</p>
+<p>Create a function to return the sum of all the multiples of factors in a found in in l (a and l should be arrays of integers and a is of length 2)</p>
+<p>Call the function and alert the user to the correct answer when they press the button.</p>
+</p>
+    <p>Enter First Number here </p>
+    <input type="number"  id="userInput1" placeholder="Ente A Num ">
 
-    <p></p>
+
+    <p>Enter Third Number Here </p>
+    <input type="number"  id="userInput3" placeholder="Enter  L Num ">
+
+    <p>Calculate the Sum :  </p>
+    <Button onclick=findMulSum() >Press Me ! </Button>
+
+
+    <script>
+
+        function findMulSum(){
+
+            const aValue= parseInt(document.getElementById("userInput1").value)
+            const bValue= parseInt(document.getElementById("userInput2").value)
+            const nValue= parseInt(document.getElementById("userInput3").value)
+          
+
+        let sum=0;
+        for ( let x =0; x < nValue; x++){
+        if (x%aValue==0 || x%bValue==0 ){
+            sum+=x;
+
+        }
+//alert (`sum of all the multiples of ${aValue} and ${bValue} below ${nValue} is  ${sum}`)
+
+        document.getElementById("userInput1").innerHTML="You entered: " + aValue
+        document.getElementById("userInput2").innerHTML="You entered: " + bValue
+        document.getElementById("userInput3").innerHTML="You entered: " + nValue
+
+    }
+    alert (`sum of all the multiples of ${aValue} and ${bValue} below ${nValue} is  ${sum}`)
+  
+
+     }
+    </script>
 
 </body>
 
