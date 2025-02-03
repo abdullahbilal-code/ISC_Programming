@@ -102,9 +102,11 @@
     function findMulSum(){
 
         let arr = []; 
-        arr[0]= parseInt(document.getElementById("userInput1").value) || 0;
-        arr[1]= parseInt(document.getElementById("userInput2").value) || 0;
-        arr[2]= parseInt(document.getElementById("userInput3").value) || 0;
+        arr[0]= parseInt(document.getElementById("userInput1").value);
+        arr[1]= parseInt(document.getElementById("userInput2").value);
+        arr[2]= parseInt(document.getElementById("userInput3").value);
+
+        console.log(`${arr[0]} and ${arr[1]} and ${arr[2]}`)
       
         if (arr[0]<=0 || arr[1] <=0 || arr[2] <= 0){
             alert("Please enter valid positive numbers");
