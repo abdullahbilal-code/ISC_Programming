@@ -84,24 +84,22 @@
   </p>
 <p>Button and Three input boxes</p>
 
-<p>Enter First Number here </p>
-<input type="number"  id="userInput1" placeholder="Ente A Num ">
+<p>Enter First Number (A):</p>
+    <input type="number" id="userInput1" placeholder="Enter A Num">
 
-<p>Enter Second  Number here </p>
-<input type="number"  id="userInput2" placeholder="Enter B Num ">
+    <p>Enter Second Number (B):</p>
+    <input type="number" id="userInput2" placeholder="Enter B Num">
 
-<p>Enter Third Number Here </p> 
-<input type="number"  id="userInput3" placeholder="Enter  L Num ">
+    <p>Enter Limit (L):</p>
+    <input type="number" id="userInput3" placeholder="Enter L Num">
 
-<p>Calculate the Sum :  </p>
-<Button onclick="findMulSum()" >Press Me ! </Button>
+    <p>Calculate the Sum:</p>
+    <button onclick="findMulSum()">Press Me!</button>
 
-
-<script>
-
-    function findMulSum(){
-
-        let arr = [
+    <script>
+        function findMulSum() {
+            // Fetch values and ensure they are valid numbers
+            let arr = [
                 Number(document.getElementById("userInput1").value) || 0,
                 Number(document.getElementById("userInput2").value) || 0,
                 Number(document.getElementById("userInput3").value) || 0
@@ -113,20 +111,16 @@
                 return;
             }
 
-    let sum=0;
+            let sum = 0;
 
-    for ( let x =0; x < arr[2]; x++){
+            for (let x = 0; x < arr[2]; x++) {
+                if (x % arr[0] === 0 || x % arr[1] === 0) {
+                    sum += x;
+                }
+            }
 
-    if (x%arr[0]===0 || x%arr[1]===0 ){
-        
-        sum+=x;
-
-
-    }
-}
-    alert (`sum of all the multiples of ${arr[0]} and ${arr[1]} below ${arr[2]} is  ${sum}`)
-
-}
+            alert(`Sum of all multiples of ${arr[0]} and ${arr[1]} below ${arr[2]} is ${sum}`);
+        }
 </script>
 
 
