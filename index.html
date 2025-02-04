@@ -79,7 +79,7 @@
 
  <p>Exercise 4, Arrays:</p>
  <p>Create a page with a button and three input boxes, labelled a, b and l, l should be a large input</p>
- <p>Create a function to return the sum of all the multiples of a or b in l</p>
+ <p>Create a function f4 to return the sum of all the multiples of a or b in l</p>
  <p>Call the function and alert the user to the correct answer when they press the button.</p>
   </p>
 <p>Button and Three input boxes</p>
@@ -94,23 +94,22 @@
 <input type="number"  id="Input3" placeholder="Enter  L Num ">
 
 <p>Calculate the Sum :  </p>
-<Button onclick="f4()" >Press Me ! </Button>
+<Button onclick="findSum()" >Press Me ! </Button>
 
 
 <script>
-         console.log(document.getElementById("userInput1").value);
-             let arr = [
+            function findSum(){
+                let arr = [
                 parseInt(document.getElementById("Input1").value),
                 parseInt(document.getElementById("Input2").value),
                 parseInt(document.getElementById("Input3").value)
              ]
-              function f4( arr) {
-            // Fetch values and ensure they are valid numbers
-           
-       console.log(1);
-           
+             f4(arr);
 
-             console.log(1);
+            }
+             
+              function f4( arr) {
+             // Fetch values and ensure they are valid number
 
              if (arr.includes(0)) {
                 alert("Please enter valid positive numbers");
