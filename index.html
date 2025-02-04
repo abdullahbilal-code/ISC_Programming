@@ -85,13 +85,13 @@
 <p>Button and Three input boxes</p>
 
 <p>Enter First Number here </p>
-<input type="number"  id="userInput1" placeholder="Ente A Num ">
+<input type="number"  id="Input1" placeholder="Ente A Num ">
 
 <p>Enter Second  Number here </p>
-<input type="number"  id="userInput2" placeholder="Enter B Num ">
+<input type="number"  id="Input2" placeholder="Enter B Num ">
 
 <p>Enter Third Number Here </p> 
-<input type="number"  id="userInput3" placeholder="Enter  L Num ">
+<input type="number"  id="Input3" placeholder="Enter  L Num ">
 
 <p>Calculate the Sum :  </p>
 <Button onclick="findMulSum()" >Press Me ! </Button>
@@ -102,22 +102,25 @@
 function findMulSum() {
             // Fetch values and ensure they are valid numbers
             console.log(document.getElementById("userInput1").value);
-
+console.log(1);
             let arr = [
-                parseInt(document.getElementById("userInput1").value),
-                parseInt(document.getElementById("userInput2").value),
-                parseInt(document.getElementById("userInput3").value)
+                parseInt(document.getElementById("Input1").value),
+                parseInt(document.getElementById("Input2").value),
+                parseInt(document.getElementById("Input3").value)
              ]
 
+             console.log(1);
 
              if (arr.includes(0)) {
                 alert("Please enter valid positive numbers");
                 return;
             }
+            console.log(1);
 
             let sum = 0;
 
             for (let x = 0; x < arr[2]; x++) {
+                console.log("*");
                 if (x % arr[0] === 0 || x % arr[1] === 0) {
                     sum += x;
                 }
