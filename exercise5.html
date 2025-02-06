@@ -136,7 +136,7 @@
         }
 
         function f7(basket,prices) {
-            if(basket!= typeof(Object)|| prices != typeof(Object)){
+            if(typeof basket!= 'Object'||typeof prices != 'Object'){
                 alert('Basket or Prices are not Object type!')
             }
             let totalCost=0;
