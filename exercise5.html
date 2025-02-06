@@ -17,9 +17,37 @@
     </p>
     <p>You may find the split function useful for creating arrays from the strings entered: <a href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>
 
+    <p>Enter a Input here into Two Integers: </p>
+    <input type="number"  id="aInput" placeholder="Enter two numbers e.g : 1 2 ">
+
+    <p>Enter L Input  here in Integers: </p>
+    <input type="number"  id="lInput" placeholder="Enter numbers e.g: 5 10 15">
+
+    <button onclick="fSum()">Hey Press Me!</button>
     <script>
-        function f5(a,b){
+
+        
+
+        function f5(a,l){
+
+            let sum=0;
+            for(let x=0; x < l.length(); x++){
+
+                if (l[x]%a[0]===0 || l[x]%a[1]===0){
+                    sum+=l[x];
+                 }
+            }
+            return sum;
 
         }
+        function fSum(){
+
+            let arr1 = document.getElementById("aInput").value.split(" ").map(Number);
+            let arr2 = document.getElementById("lInput").value.split(" ").map(Number);
+            let sum=f5(arr1, arr2);
+            alert (`sum of all the multiples of ${arr1[0]} and ${arr1[1]} in Array L  is  ${sum}`)
+
+        }
+
     </script>
 </body>
