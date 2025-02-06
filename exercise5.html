@@ -78,7 +78,7 @@
             for(let i=0; i < a.length ; i++){
                  for(let x=0; x < l.length ; x++){
 
-                     if (l[x]%a[i]===0 || l[x]%a[i]===0){
+                     if (l[x]%a[i]===0 ){
                            sum+=l[x];
              }
             }
@@ -89,8 +89,8 @@
         }
         function ofSum(){
 
-            let arr1 = document.getElementById("aInput").value.split(" ").map(Number);
-            let arr2 = document.getElementById("lInput").value.split(" ").map(Number);
+            let arr1 = document.getElementById("a1Input").value.split(" ").map(Number);
+            let arr2 = document.getElementById("l2Input").value.split(" ").map(Number);
             let sum=f6(arr1, arr2);
             alert (`sum of all the multiples of ${arr1[0]} and ${arr1[1]} in Array L  is  ${sum}`)
 
