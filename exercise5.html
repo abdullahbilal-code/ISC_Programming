@@ -67,12 +67,12 @@
     <p>Enter L Input  here in Integers: </p>
     <input type="text"  id="l2Input" placeholder="Enter numbers e.g: 5 10 15">
 
-    <button onclick="fSum()">Hey Press Me!</button>
+    <button onclick="ofSum()">Hey Press Me!</button>
     <script>
 
         
 
-        function f5(a,l){
+        function f6(a,l){
 
             let sum=0;
             for(let i=0; i < a.length ; i++){
@@ -87,11 +87,11 @@
             return sum;
 
         }
-        function fSum(){
+        function ofSum(){
 
             let arr1 = document.getElementById("aInput").value.split(" ").map(Number);
             let arr2 = document.getElementById("lInput").value.split(" ").map(Number);
-            let sum=f5(arr1, arr2);
+            let sum=f6(arr1, arr2);
             alert (`sum of all the multiples of ${arr1[0]} and ${arr1[1]} in Array L  is  ${sum}`)
 
         }
