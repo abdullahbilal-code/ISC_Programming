@@ -61,7 +61,7 @@
     returned answer when they press the button.</p>
 </p>
 <p>You may find the split function useful for creating arrays from the strings entered: <a href="https://www.w3schools.com/jsref/jsref_split.asp">Split</a></p>
-<p>Enter a Input here into Two Integers: </p>
+    <p>Enter a Input here into Two Integers: </p>
     <input type="text"  id="a1Input" placeholder="Enter numbers e.g : 1 2 3 4 5 ">
 
     <p>Enter L Input  here in Integers: </p>
@@ -97,7 +97,8 @@
         }
 
     </script>
-    <p>Exercise 7, Objects as dictionaries/hashtables:</p>
+    <h1>Exercise 7</h1>
+    <p>Objects as dictionaries/hashtables:</p>
     <p>Create a function, f7, that takes two parameters, basket and prices</p>
     <p>f7 should compute the cost of the basket given the prices supplied.</p>
     <p>basket should be an object holding product:quantity (string:int) pairs</p>
@@ -106,33 +107,44 @@
     <p>====</p>
     <p>Create a testing page for the function f7</p>
 
+    <p>Enter the Name of the Product: </p>
+    <input type="text"    id="pName"    placeholder=" e.g: Papaya ">
+
+    <p>Enter the Quanity of that product:  </p>
+    <input type="number"  id="pQuant"  placeholder="e.g : 2, 5 etc">
     
+    <p>Enter the Price of that product in euros:  </p>
+    <input type="decimal" id="pPrice" placeholder="e.g 0.7, 2.5 etc.">
+    <p>Calculate the Total Price </p>
 
     <script>
-        let basket= {
-           apple :3,
-           mango: 4,
-           banana: 6
 
-        };
+        
+        function displayCost (){
+           let proName= document.getElementById("pName").value
+           let proQuantity=document.getElementById("pQuant").value
+           let proPrice= document.getElementById("pPrice").value
 
-        let prices= {
-           apple :0.3,
-           mango: 0.4,
-           banana: 0.6
+           let basket ={};
+           let prices={};
 
-        };
+           basket[proName]= basket[proName] + proQuantity;
+           prices[proName]=proPrice;
+           let cost = f7(basket,prices);
+           alert(`Total Cost of the Products are:  ${cost}`)
+        }
+
         function f7(basket,prices) {
             if(basket!= typeof(Object)|| prices != typeof(Object)){
                 alert('Basket or Prices are not Object type!')
             }
-            totalCost=0;
+            let totalCost=0;
             for(let product in basket){
                 if(prices[product]!== undefined){
                     totalCost+=basket[product]*prices[product]
                 }
             }
-            alert (`Total Cost of Products in basket is:  ${totalCost}`)
+            return totalCost;
         }
 
       
