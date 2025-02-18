@@ -1,22 +1,38 @@
 class basket {
     
-    basket(a,b,c ){
+
+
+    constructor(){
+      product=null;
+      qty = null;
+      price=null;
+    }
+
+    basket(a,b){
 
         this.product=a
         this.qty=b
-        this.price=c
+      
     }
     addItem (a, b) {
         product=a
         qty=b
     }
-    getCost(){
+    getCost(prc){
+     price=prc;
      return this.qty*this.price;
      
     }
 }
+function findPrice(){
 
-const basket = new basket.addItem('Apple', 2, 2.5);
-let p=basket.getCost();
-alert(`The Price of the product is ${p}`)
-
+    let productName= document.getElementById("productId").value;
+    let productQty=parseInt(document.getElementById("QtyId").value);
+    let productPrice=parseInt(document.getElementById("priceId").value);
+    
+    const myBasket = new basket();
+    myBasket.addItem(productName,productQty);
+    let p=myBasket.getCost(productPrice);
+    alert(`The Price of the product is ${p}`);
+    
+}
