@@ -11,36 +11,27 @@ class Basket {
         product=a
         qty=b
     }
-    getCost(prc){
-     this.price=prc;
-     return this.qty*this.price;
-     
-    }
+    
 }
 
-const  myBasket  = new Basket();
 
-function addToBasket (){
 
+function getCost (){
+    const  myBasket  = new Basket();
     let productName= document.getElementById("productId").value;
     let productQty=parseInt(document.getElementById("qtyId").value);
-    
+    let productPrice=parseInt(document.getElementById("priceId").value);
+
     myBasket.addItem(productName,productQty);
     alert(`Added ${productQty} of ${productName} to the basket.`);
     
-}
-
-function findPrice(){
-
-    
-    let productPrice=parseInt(document.getElementById("priceId").value);
     
     if (!myBasket.product || myBasket.qty === null) {
         alert("Please add a product first!");
-        return;
     }
 
-    let p = myBasket.getCost(productPrice);
+    let p =productPrice*productQty;
     alert(`The total price of ${myBasket.qty} ${myBasket.product}(s) is €${p}`);
-    
 }
+
+
