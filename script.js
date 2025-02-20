@@ -1,4 +1,4 @@
-class basket {
+class Basket {
     
 
 
@@ -26,7 +26,7 @@ class basket {
 }
 
  
-const myBasket = new basket();
+const  myBasket  = new Basket();
 function addToBasket (){
 
     let productName= document.getElementById("productId").value;

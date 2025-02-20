@@ -1,0 +1,12 @@
+{
+  "name": "isc_programming",
+  "version": "1.0.0",
+  "description": "It's my Master IS Programming Lab Repo DBS",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
