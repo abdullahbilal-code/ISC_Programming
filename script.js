@@ -6,12 +6,7 @@ class Basket {
       price=null;
     }
 
-    basket(a,b){
 
-        this.product=a
-        this.qty=b
-      
-    }
     addItem (a, b) {
         product=a
         qty=b
@@ -28,7 +23,7 @@ const  myBasket  = new Basket();
 function addToBasket (){
 
     let productName= document.getElementById("productId").value;
-    let productQty=parseInt(document.getElementById("QtyId").value);
+    let productQty=parseInt(document.getElementById("qtyId").value);
     
     myBasket.addItem(productName,productQty);
     alert(`Added ${productQty} of ${productName} to the basket.`);
