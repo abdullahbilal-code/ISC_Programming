@@ -1,15 +1,15 @@
 class Basket {
     
     constructor(){
-      product=null;
-      qty = null;
-      price=null;
+      let product=null;
+      let qty = null;
+      let price=null;
     }
 
 
     addItem (a, b) {
-        product=a
-        qty=b
+        this.product=a
+        this.qty=b
     }
     
 }
@@ -18,6 +18,7 @@ class Basket {
 
 function getCost (){
     const  myBasket  = new Basket();
+
     let productName= document.getElementById("productId").value;
     let productQty=parseInt(document.getElementById("qtyId").value);
     let productPrice=parseInt(document.getElementById("priceId").value);
