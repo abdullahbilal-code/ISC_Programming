@@ -1,9 +1,9 @@
 class Basket {
     
     constructor(){
-      let product=null;
-      let qty = null;
-      let price=null;
+      this.product=null;
+      this.qty = null;
+      this.price=null;
     }
 
 
@@ -13,10 +13,9 @@ class Basket {
     }
 
 
-    getPrice (a, b) {
-        
-        this.price=a;
-        this.qty=b;
+    getPrice (p) {
+
+        this.price=p;
         return this.price*this.qty;
     }
     
@@ -39,7 +38,7 @@ function getCost (){
         alert("Please add a product first!");
     }
 
-    let p =myBasket.getPrice(productQty*productPrice);
+    let p =myBasket.getPrice(productPrice);
     alert(`The total price of ${myBasket.qty} ${myBasket.product}(s) is €${p}`);
 }
 
